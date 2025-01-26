@@ -20,7 +20,7 @@ Assurez-vous d'avoir les outils suivants installés sur votre machine :
 
 1. **Clonez le dépôt** :
    ```bash
-   git clone <URL_DU_DEPOT>
+   git clone <https://github.com/ArijFendri/project_test>
    cd <project_test>
 2. **npm install browser-sync gulp-sass sass --save-dev** 
     Installez les dépendances nécessaires 
