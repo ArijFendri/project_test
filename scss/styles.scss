@@ -1,0 +1,10 @@
+@import "variables";
+@import "header";
+@import "sidebar";
+@import "table";
+@import "layout";
+//@import 'footer';
+
+* {
+  font-family: $font-family;
+}

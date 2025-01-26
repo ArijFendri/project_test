@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affinicia - Gestion des utilisateurs</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://use.typekit.net/dii3kjm.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <section class="top-section">
+ 
+ 
+        <nav>
+          <ul> 
+            <li class="logo-section">
+              <img class="logo-co" src="assets/logos/Vector.png" alt="Logo Affinicia">
+              <img class="control-panel" src="assets/logos/panel.png" alt="Panel de contrôle" onclick="toggleSidebar()">
+          </li>
+            
+            <li class="menu-item selected">
+              <img src="assets/logos/target.png" alt="" style="width: 20px; height: 20px; margin-right: 1rem;"> 
+              <span class="menu-text">Campagnes</span>
+            </li>
+            <li class="menu-item">
+              <img src="assets/logos/analytics.png" alt="" style="width: 20px; height: 20px; margin-right: 1rem;"> 
+              <span class="menu-text">Reportings</span>
+            </li>
+            <li class="menu-item">
+              <img src="assets/logos/article.png" alt="" style="width: 20px; height: 20px; margin-right: 1rem;"> 
+              <span class="menu-text">Facturation</span>
+            </li>
+            <li class="menu-item">
+              <img src="assets/logos/set.png" alt="" style="width: 20px; height: 20px; margin-right: 1rem;"> 
+              <span class="menu-text">Administration</span>
+            </li>
+          </ul>
+        </nav>
+    </section>
+    <section class="bottom-section">
+      <div class="user-info">
+        <span class="user-name" data-full-name="Nom / Prénom">Nom / Prénom</span>
+        <img class="logout" src="assets/logos/logout.png" alt="logout">
+      </div>
+    </section>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-top">
+          <h1>Utilisateurs</h1>
+          <div class="search-container">
+            <div class="search-wrapper">
+              <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Rechercher">
+                <img src="assets/logos/search.png" alt="Icône de recherche" class="search-icon">
+              </div>
+              <span class="shortcut">⌘ + K</span>
+            </div>
+          </div>
+      
+          
+        </div>
+        <div class="header-bottom">
+          <div class="tabs">
+            <button class="tab active">Utilisateurs actifs</button>
+            <button class="tab">Utilisateurs archivés</button>
+          </div>
+          <div class="selection-bar">
+            <div class="left-section">
+              <span>2 utilisateurs sélectionnés</span>
+              <div class="icon">
+                <img src="assets/logos/archive.png" alt="Archiver">
+              </div>
+              <div class="icon">
+                <img src="assets/logos/archive.png" alt="Archiver">
+              </div>
+            </div>
+            <div class="right-section">
+              <div class="search-input-wrapper">
+                <img src="assets/logos/search.png" alt="Icône de recherche" class="search-icon">
+                <input type="text" class="search-input" placeholder="Rechercher un utilisateur">
+              </div>
+              <button class="btn-filter">
+                <img src="assets/logos/filter_list.png" alt="Filtres" class="btn-icon"> Filtres
+              </button>
+              <button class="btn-add">
+                <img src="assets/logos/add.png" alt="Ajouter" class="btn-icon"> Ajouter un utilisateur
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- User Management Section -->
+      <section class="user-management">
+        <div class="table-container">
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th><input type="checkbox"></th>
+           
+              <th>Utilisateur</th>
+              <th>Email</th>
+              <th class="sortable">Centres d'appels</th>
+              <th class="sortable">Rôle</th>
+              <th>Derniére connexion</th>
+              <th>Date de création</th>
+            </tr>
+          </thead>
+          
+          <tbody id="table-body"></tbody> 
+        </table>
+      
+        <!-- Pagination  -->
+        <div id="pagination-wrapper">
+          <div class="rows-per-page">
+            <label for="rows-per-page-select">Afficher</label>
+            <select id="rows-per-page-select">
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+            </select>
+            </div>
+          <div id="pagination">
+            <button class="pagination-btn">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn">...</button>
+            <button class="pagination-btn">5</button>
+          </div>
+        </div>
+        
+      </section>
+      
+    </main>
+  </div>
+  <script  src="js/roles.js"></script>
+  <script  src="js/pagination.js"></script>
+  <script  src="js/scroll.js"></script>
+</body>
+</html>
